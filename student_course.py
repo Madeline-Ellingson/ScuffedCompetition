@@ -26,7 +26,10 @@ def main():
             else:
                 num = course_iq[j][0] * len(course_iq[j])
             if num == min_num:
+                if course_iq[j][0] == 0:
+                    course_iq[j].remove(0)
                 course_iq[j].append(i)
+
                 print(j + 1, end=" ")
                 break
     print()
