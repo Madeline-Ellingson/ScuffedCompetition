@@ -3,10 +3,11 @@ def main():
     n, f, s = nfs[0], nfs[1], nfs[2]
     course_iq = input().split()
     rob_iq = input().split()
-    for i in range(int(n) - len(course_iq)):
-        course_iq.append("0")
+
     for i in range(len(course_iq)):
         course_iq[i] = [int(course_iq[i])]
+    for i in range(int(n) - len(course_iq)):
+        course_iq.append([0])
     for i in range(len(rob_iq)):
         rob_iq[i] = int(rob_iq[i])
 
